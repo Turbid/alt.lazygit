@@ -1,11 +1,15 @@
+%global _unpackaged_files_terminate_build 1
+
 Name: lazygit
 Version: 0.36.0
-Release: alt1
+Release: alt2
 
 Summary: Simple terminal UI for git commands
 License: MIT
 Group: Development/Other
 URL: https://github.com/jesseduffield/lazygit
+
+ExclusiveArch: %go_arches
 
 #Source-url: %{url}/archive/v%{version}/%{name}-%{version}.tar.gz
 Source: %name-%version.tar
@@ -60,5 +64,9 @@ export IGNORE_SOURCES=1
 %_bindir/%{name}
 
 %changelog
+* Thu Jan 10 2023 Ilya Demyanov <turbid@altlinux.ru> 0.36.0-alt2
+- add _unpackaged_files_terminate_build macros
+- add ExclusiveArch field
+
 * Mon Jan 09 2023 Ilya Demyanov <turbid@altlinux.ru> 0.36.0-alt1
 - initial build for ALT
